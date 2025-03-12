@@ -4,5 +4,44 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Levy_MainMenu.unity
+    guid: 0d47258e35239594dab00406c0a429b4
+  - enabled: 1
+    path: Assets/Scenes/Oldfields_MainMenu.unity
+    guid: 38b0b6eb2357dc846af3c864270dc4e5
+  - enabled: 1
+    path: Assets/Scenes/Mitchells_MainMenu.unity
+    guid: af2735d7f99b3f745b3d50c60ea6ab2c
+  - enabled: 1
+    path: Assets/Scenes/GeorgeSaunders_MainMenu.unity
+    guid: 26ce68d141d2d7a4385c26d41be25f06
+  - enabled: 1
+    path: Assets/FloorThree/Assets/Scene/Oldfields_P_ThirdFloor.unity
+    guid: 9e76443f82227d7478778da8862b3d4a
+  - enabled: 1
+    path: Assets/FloorThree/Assets/Scene/Oldfields_V_ThirdFloor.unity
+    guid: 4f8ba95758f5aed40b72d64774921a62
+  - enabled: 1
+    path: Assets/FloorThree/Assets/Scene/Mitchels_P_ThirdFloor.unity
+    guid: 373a22578587d2e4fbb91ed167c7d528
+  - enabled: 1
+    path: Assets/FloorThree/Assets/Scene/Mitchells_V_ThirdFloor.unity
+    guid: fb9b1fbf8f3019c429b485ec029d3a19
+  - enabled: 1
+    path: Assets/FloorThree/Assets/Scene/Levy_V_ThirdFloor.unity
+    guid: 8561c2ee5f3d92e429391acb7494f09b
+  - enabled: 1
+    path: Assets/FloorThree/Assets/Scene/Levy_P_ThirdFloor.unity
+    guid: f3bcd14770b777a4e9b295e4aa3a4ecf
+  - enabled: 1
+    path: Assets/FloorThree/Assets/Scene/George Saunders_V_ThirdFloor.unity
+    guid: 8742851702b84e849b401bb4e4aacb17
+  - enabled: 1
+    path: Assets/FloorThree/Assets/Scene/George Saunders_P_ThirdFloor.unity
+    guid: fadf12ebb6ee8e649a6caa170a8ce0bb
   m_configObjects: {}
