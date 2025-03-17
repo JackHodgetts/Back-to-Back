@@ -2,10 +2,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class InputManager : MonoBehaviour
 {
     private TouchControls touchControls;
+    private GraphicRaycaster graphicRaycaster;
+    private EventSystem eventSystem;
 
     private Vector2 startTouchPosition;
     private Vector2 endTouchPosition;
@@ -13,6 +16,14 @@ public class InputManager : MonoBehaviour
     private void Awake()
     {
         touchControls = new TouchControls();
+
+        graphicRaycaster = FindObjectOfType<GraphicRaycaster>();
+        eventSystem = FindObjectOfType<EventSystem>();
+
+        if (graphicRaycaster == null)
+        {
+            Debug.LogError("GraphicRaycaster not found in the scene! Make sure your Canvas has a GraphicRaycaster component.");
+        }
     }
 
     private void OnEnable()
@@ -41,27 +52,14 @@ public class InputManager : MonoBehaviour
         Vector2 touchPosition = touchControls.Touch.TouchPosition.ReadValue<Vector2>();
         Debug.Log($"Touched the screen at (screen space): {touchPosition}");
 
-        // Convert screen position to world position
-        Vector2 worldPoint = Camera.main.ScreenToWorldPoint(touchPosition);
-        Debug.Log($"Converted to world position: {worldPoint}");
-
         // Check if the touch is over a UI element
-        if (IsPointerOverUI(touchPosition))
+        GameObject hitObject = GetUIElementAtPosition(touchPosition);
+        if (hitObject != null)
         {
-            Debug.Log("Touched a UI element!");
-            return;  // Skip processing if it's a UI element
-        }
+            Debug.Log($"Touched UI element: {hitObject.name}");
 
-        // Perform raycast
-        RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero);
-
-        // Debug the result of the raycast
-        if (hit.collider != null)
-        {
-            Debug.Log($"Raycast hit: {hit.collider.gameObject.name}");
-
-            // Check if the hit object has InteractiveObjects script
-            InteractiveObjects interactive = hit.collider.GetComponent<InteractiveObjects>();
+            // Check if the UI element has an InteractiveObjects component
+            InteractiveObjects interactive = hitObject.GetComponentInParent<InteractiveObjects>();
             if (interactive != null)
             {
                 Debug.Log("Interactive object found!");
@@ -69,12 +67,8 @@ public class InputManager : MonoBehaviour
             }
             else
             {
-                Debug.Log("No InteractiveObjects script on the touched object.");
+                Debug.Log($"No InteractiveObjects script found on {hitObject.name} or its parents.");
             }
-        }
-        else
-        {
-            Debug.Log("Raycast did not hit any object.");
         }
 
         // Start dragging
@@ -101,15 +95,23 @@ public class InputManager : MonoBehaviour
         // Debug.Log("Holding touch on object...");
     }
 
-    private bool IsPointerOverUI(Vector2 touchPosition)
+    // Function to detect UI elements at touch position
+    private GameObject GetUIElementAtPosition(Vector2 position)
     {
-        PointerEventData eventData = new PointerEventData(EventSystem.current)
+        if (eventSystem == null || graphicRaycaster == null)
         {
-            position = touchPosition
+            Debug.LogError("EventSystem or GraphicRaycaster is missing!");
+            return null;
+        }
+
+        PointerEventData eventData = new PointerEventData(eventSystem)
+        {
+            position = position
         };
 
         List<RaycastResult> results = new List<RaycastResult>();
-        EventSystem.current.RaycastAll(eventData, results);
-        return results.Count > 0;  // Return true if pointer is over any UI element
+        graphicRaycaster.Raycast(eventData, results);
+
+        return results.Count > 0 ? results[0].gameObject : null;
     }
 }
