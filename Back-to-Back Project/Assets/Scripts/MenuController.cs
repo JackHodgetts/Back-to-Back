@@ -47,7 +47,7 @@ public class MenuController : MonoBehaviour
     //Loads the video for floor two for each house
     public void LoadLevysFloorTwo()
     {
-        SceneManager.LoadScene("Levy_V_SecondFloor");
+        SceneManager.LoadScene("Levys_V_SecondFloor");
     }
     public void LoadOldfieldsFloorTwo()
     {
