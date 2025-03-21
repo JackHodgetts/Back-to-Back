@@ -80,4 +80,15 @@ public class MenuController : MonoBehaviour
         SceneManager.LoadScene("GeorgeSaunders_V_ThirdFloor");
     }
 
+    //Next and back buttons
+    public void Next()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void Back()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+
+    }
 }

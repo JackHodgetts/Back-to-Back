@@ -11,6 +11,8 @@ public class PauseController : MonoBehaviour
     public Button button;
     public Sprite startSprite;
     public Sprite stopSprite;
+    public AudioSource audioSource;
+
 
     // Start is called before the first frame update
     void Start()
@@ -30,11 +32,13 @@ public class PauseController : MonoBehaviour
         {
             player.Play();
             button.image.sprite = stopSprite;
+            audioSource.Play();
         }
         else
         {
             player.Pause();
             button.image.sprite = startSprite;
+            audioSource.Pause();
         }
     }
 }
