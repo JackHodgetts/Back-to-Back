@@ -6,22 +6,11 @@ using UnityEngine.UI;
 public class InteractiveObjects : MonoBehaviour
 {
 
-    public string objectInfo = "Default object information"; // Assign in Inspector
+    public string objectInfo; // Assign in Inspector
 
     public void ShowInfo()
     {
-        Debug.Log("Showing info: " + objectInfo);
+        TextBoxController.instance.ToggleText(objectInfo);
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

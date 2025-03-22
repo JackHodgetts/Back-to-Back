@@ -20,10 +20,6 @@ public class InputManager : MonoBehaviour
         graphicRaycaster = FindObjectOfType<GraphicRaycaster>();
         eventSystem = FindObjectOfType<EventSystem>();
 
-        if (graphicRaycaster == null)
-        {
-            Debug.LogError("GraphicRaycaster not found in the scene! Make sure your Canvas has a GraphicRaycaster component.");
-        }
     }
 
     private void OnEnable()
@@ -98,20 +94,9 @@ public class InputManager : MonoBehaviour
     // Function to detect UI elements at touch position
     private GameObject GetUIElementAtPosition(Vector2 position)
     {
-        if (eventSystem == null || graphicRaycaster == null)
-        {
-            Debug.LogError("EventSystem or GraphicRaycaster is missing!");
-            return null;
-        }
-
-        PointerEventData eventData = new PointerEventData(eventSystem)
-        {
-            position = position
-        };
-
+        PointerEventData eventData = new PointerEventData(eventSystem) { position = position };
         List<RaycastResult> results = new List<RaycastResult>();
         graphicRaycaster.Raycast(eventData, results);
-
         return results.Count > 0 ? results[0].gameObject : null;
     }
 }
