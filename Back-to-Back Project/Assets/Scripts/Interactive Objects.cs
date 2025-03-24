@@ -7,6 +7,7 @@ public class InteractiveObjects : MonoBehaviour
 {
 
     public string objectInfo; // Assign in Inspector
+    public string fileName;
 
     public void ShowInfo()
     {

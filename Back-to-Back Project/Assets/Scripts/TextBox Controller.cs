@@ -52,4 +52,20 @@ public class TextBoxController : MonoBehaviour
         textboxPanal.SetActive(false);
         isTextboxVisible = false;
     }
+
+    public void LoadTextFromFile(string fileName)
+    {
+        // Load the text file (ensure it's in the Resources folder)
+        TextAsset textAsset = Resources.Load<TextAsset>(fileName);
+
+        if (textAsset != null)
+        {
+            // Pass the content of the text file to ShowText function
+            ShowText(textAsset.text);
+        }
+        else
+        {
+            Debug.LogError("Text file not found: " + fileName);
+        }
+    }
 }
