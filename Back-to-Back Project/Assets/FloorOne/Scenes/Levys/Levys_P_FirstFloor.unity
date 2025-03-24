@@ -220,6 +220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInfo: Testing for interactive three
+  fileName: 
 --- !u!114 &162394251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -352,6 +353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInfo: Testing for interactive two
+  fileName: 
 --- !u!114 &363106095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -688,6 +690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInfo: Testing for interactive one
+  fileName: example
 --- !u!1 &1273281465
 GameObject:
   m_ObjectHideFlags: 0
