@@ -47,19 +47,19 @@ public class MenuController : MonoBehaviour
     //Loads the video for floor two for each house
     public void LoadLevysFloorTwo()
     {
-        SceneManager.LoadScene("Levy_V_FloorTwo");
+        SceneManager.LoadScene("Levys_V_SecondFloor");
     }
     public void LoadOldfieldsFloorTwo()
     {
-        SceneManager.LoadScene("Oldfields_V_FloorTwo");
+        SceneManager.LoadScene("Oldfields_V_SecondFloor");
     }
     public void LoadMitchellsFloorTwo()
     {
-        SceneManager.LoadScene("Mitchells_V_FloorTwo");
+        SceneManager.LoadScene("Mitchells_V_SecondFloor");
     }
     public void LoadGeorgeSaundersFloorTwo()
     {
-        SceneManager.LoadScene("GeorgeSaunders_V_FloorTwo");
+        SceneManager.LoadScene("GeorgeSaunders_V_SecondFloor");
     }
 
     //Loads the video for floor three for each house
@@ -80,4 +80,15 @@ public class MenuController : MonoBehaviour
         SceneManager.LoadScene("GeorgeSaunders_V_ThirdFloor");
     }
 
+    //Next and back buttons
+    public void Next()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void Back()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+
+    }
 }
