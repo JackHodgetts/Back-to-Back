@@ -11,7 +11,7 @@ public class InteractiveObjects : MonoBehaviour
 
     public void ShowInfo()
     {
-        TextBoxController.instance.ToggleText(objectInfo);
+        TextBoxController.instance.LoadTextFromFile(fileName);
     }
 
 }
