@@ -823,7 +823,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInfo: Testing for interactive one
-  fileName: 
+  fileName: TextBoxExampleText
 --- !u!1 &1273281465
 GameObject:
   m_ObjectHideFlags: 0
