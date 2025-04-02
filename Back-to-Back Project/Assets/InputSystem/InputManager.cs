@@ -9,6 +9,7 @@ public class InputManager : MonoBehaviour
     private TouchControls touchControls;
     private GraphicRaycaster graphicRaycaster;
     private EventSystem eventSystem;
+    private ScrollRect activeScrollRect;
 
     private Vector2 startTouchPosition;
     private Vector2 endTouchPosition;
@@ -29,16 +30,12 @@ public class InputManager : MonoBehaviour
         // Detect tap
         touchControls.Touch.TouchPress.started += StartTouch;
         touchControls.Touch.TouchPress.canceled += EndTouch;
-
-        // Detect hold
-        touchControls.Touch.TouchHold.performed += HoldTouch;
     }
 
     private void OnDisable()
     {
         touchControls.Touch.TouchPress.started -= StartTouch;
         touchControls.Touch.TouchPress.canceled -= EndTouch;
-        touchControls.Touch.TouchHold.performed -= HoldTouch;
         touchControls.Disable();
     }
 
@@ -53,6 +50,15 @@ public class InputManager : MonoBehaviour
         if (hitObject != null)
         {
             Debug.Log($"Touched UI element: {hitObject.name}");
+
+            // Check if it's a ScrollRect
+            ScrollRect scrollRect = hitObject.GetComponentInParent<ScrollRect>();
+            if (scrollRect != null)
+            {
+                Debug.Log("Touch detected on a ScrollRect");
+                activeScrollRect = scrollRect;
+                return;
+            }
 
             // Check if the UI element has an InteractiveObjects component
             InteractiveObjects interactive = hitObject.GetComponentInParent<InteractiveObjects>();
@@ -78,17 +84,10 @@ public class InputManager : MonoBehaviour
         endTouchPosition = touchControls.Touch.TouchPosition.ReadValue<Vector2>();
         Vector2 swipeDelta = endTouchPosition - startTouchPosition;
 
-        if (swipeDelta.magnitude > 50f) // Adjust sensitivity
+        if (swipeDelta.magnitude < 5f)
         {
-            //Debug.Log("Swiped: " + swipeDelta);
-            // Trigger room transition or other event
+            activeScrollRect = null;
         }
-    }
-
-    private void HoldTouch(InputAction.CallbackContext context)
-    {
-        // Uncomment for holding functionality (if needed)
-        // Debug.Log("Holding touch on object...");
     }
 
     // Function to detect UI elements at touch position
