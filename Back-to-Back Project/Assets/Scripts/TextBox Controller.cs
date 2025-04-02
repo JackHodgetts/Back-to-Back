@@ -55,7 +55,6 @@ public class TextBoxController : MonoBehaviour
 
     public void LoadTextFromFile(string fileName)
     {
-        // Load the text file (ensure it's in the Resources folder)
         TextAsset textAsset = Resources.Load<TextAsset>(fileName);
 
         if (textAsset != null)
