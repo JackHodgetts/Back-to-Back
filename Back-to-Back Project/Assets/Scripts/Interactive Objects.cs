@@ -11,6 +11,7 @@ public class InteractiveObjects : MonoBehaviour
 
     public void ShowInfo()
     {
+        TextBoxController.instance.ResetScrollPosition();
         TextBoxController.instance.LoadTextFromFile(fileName);
     }
 

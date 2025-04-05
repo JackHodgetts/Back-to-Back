@@ -13,6 +13,7 @@ public class InputManager : MonoBehaviour
 
     private Vector2 startTouchPosition;
     private Vector2 endTouchPosition;
+    private bool isScrolling = false;
 
     private void Awake()
     {
@@ -43,33 +44,29 @@ public class InputManager : MonoBehaviour
     {
         // Touching the screen and finding the position
         Vector2 touchPosition = touchControls.Touch.TouchPosition.ReadValue<Vector2>();
-        Debug.Log($"Touched the screen at (screen space): {touchPosition}");
 
         // Check if the touch is over a UI element
         GameObject hitObject = GetUIElementAtPosition(touchPosition);
         if (hitObject != null)
         {
-            Debug.Log($"Touched UI element: {hitObject.name}");
 
             // Check if it's a ScrollRect
             ScrollRect scrollRect = hitObject.GetComponentInParent<ScrollRect>();
             if (scrollRect != null)
             {
                 Debug.Log("Touch detected on a ScrollRect");
-                activeScrollRect = scrollRect;
+                isScrolling = true;
                 return;
             }
 
             // Check if the UI element has an InteractiveObjects component
-            InteractiveObjects interactive = hitObject.GetComponentInParent<InteractiveObjects>();
-            if (interactive != null)
+            if (!isScrolling)
             {
-                Debug.Log("Interactive object found!");
-                interactive.ShowInfo();
-            }
-            else
-            {
-                Debug.Log($"No InteractiveObjects script found on {hitObject.name} or its parents.");
+                InteractiveObjects interactive = hitObject.GetComponentInParent<InteractiveObjects>();
+                if (interactive != null)
+                {
+                    interactive.ShowInfo();
+                }
             }
         }
 
@@ -84,10 +81,7 @@ public class InputManager : MonoBehaviour
         endTouchPosition = touchControls.Touch.TouchPosition.ReadValue<Vector2>();
         Vector2 swipeDelta = endTouchPosition - startTouchPosition;
 
-        if (swipeDelta.magnitude < 5f)
-        {
-            activeScrollRect = null;
-        }
+        isScrolling = false;
     }
 
     // Function to detect UI elements at touch position

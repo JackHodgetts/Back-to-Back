@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 
 public class TextBoxController : MonoBehaviour
@@ -65,6 +66,16 @@ public class TextBoxController : MonoBehaviour
         else
         {
             Debug.LogError("Text file not found: " + fileName);
+        }
+    }
+
+    public void ResetScrollPosition()
+    {
+        // Find the ScrollRect component and reset the scroll position to the top
+        ScrollRect scrollRect = textboxPanal.GetComponentInChildren<ScrollRect>();
+        if (scrollRect != null)
+        {
+            scrollRect.verticalNormalizedPosition = 1f; // Reset to top
         }
     }
 }
