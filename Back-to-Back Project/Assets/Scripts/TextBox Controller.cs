@@ -10,6 +10,7 @@ public class TextBoxController : MonoBehaviour
     public static TextBoxController instance;
     public GameObject textboxPanal;
     public TextMeshProUGUI textboxText;
+    public TextMeshProUGUI textboxTitle;
 
     private bool isTextboxVisible = false;
 
@@ -48,6 +49,13 @@ public class TextBoxController : MonoBehaviour
         isTextboxVisible = true;
     }
 
+    public void ShowTitle(string title)
+    {
+        textboxPanal.SetActive(true);
+        textboxTitle.text = title;
+        isTextboxVisible = true;
+    }
+
     public void HideText()
     {
         textboxPanal.SetActive(false);
@@ -62,6 +70,21 @@ public class TextBoxController : MonoBehaviour
         {
             // Pass the content of the text file to ShowText function
             ShowText(textAsset.text);
+        }
+        else
+        {
+            Debug.LogError("Text file not found: " + fileName);
+        }
+    }
+
+    public void LoadTitleFromFile(string fileName)
+    {
+        TextAsset textAsset = Resources.Load<TextAsset>(fileName);
+
+        if (textAsset != null)
+        {
+            // Pass the content of the text file to ShowText function
+            ShowTitle(textAsset.text);
         }
         else
         {
