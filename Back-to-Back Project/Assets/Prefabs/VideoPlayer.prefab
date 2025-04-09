@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 7853427652119853125}
   - component: {fileID: 214898269833073484}
   - component: {fileID: 8583425891143728552}
-  - component: {fileID: 2623301731425322421}
   - component: {fileID: 2629584758026550845}
   - component: {fileID: 6499009557099627420}
   m_Layer: 0
@@ -91,22 +90,6 @@ MonoBehaviour:
   button: {fileID: 0}
   startSprite: {fileID: 21300000, guid: a1cb9dd08f3ef68438aaa9e75b33f46c, type: 3}
   stopSprite: {fileID: 21300000, guid: c60cfbece2eb8514fb96e242358ca53e, type: 3}
-  audioSource: {fileID: 0}
---- !u!114 &2623301731425322421
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2540040776615883028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4aba80186806a324f8a80bcba6a7a5de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  muteImage: {fileID: 21300000, guid: 92389b9ee4cab0846a4d60b183754795, type: 3}
-  audioImage: {fileID: 21300000, guid: ddbd1dbbccbb5074ba442ec1998c9cd8, type: 3}
-  button: {fileID: 0}
   audioSource: {fileID: 0}
 --- !u!114 &2629584758026550845
 MonoBehaviour:

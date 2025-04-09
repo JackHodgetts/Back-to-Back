@@ -12,6 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Levy_MainMenu.unity
     guid: 0d47258e35239594dab00406c0a429b4
   - enabled: 1
+    path: Assets/FloorOne/Scenes/Levys/Levys_V_FirstFloor.unity
+    guid: bdc045f29ff7f0840bc2ef6865434d61
+  - enabled: 1
+    path: Assets/FloorOne/Scenes/Levys/Levys_P_FirstFloor.unity
+    guid: 0cb6cacea98f38745898d90d9068356b
+  - enabled: 1
     path: Assets/Scenes/Oldfields_MainMenu.unity
     guid: 38b0b6eb2357dc846af3c864270dc4e5
   - enabled: 1
@@ -20,16 +26,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GeorgeSaunders_MainMenu.unity
     guid: 26ce68d141d2d7a4385c26d41be25f06
-  - enabled: 0
+  - enabled: 1
     path: Assets/FloorThree/Scene/Oldfields/Oldfields_P_ThirdFloor.unity
     guid: 9e76443f82227d7478778da8862b3d4a
-  - enabled: 0
+  - enabled: 1
     path: Assets/FloorThree/Scene/Oldfields/Oldfields_V_ThirdFloor.unity
     guid: 4f8ba95758f5aed40b72d64774921a62
-  - enabled: 0
+  - enabled: 1
     path: Assets/FloorThree/Scene/Mitchells/Mitchels_P_ThirdFloor.unity
     guid: 373a22578587d2e4fbb91ed167c7d528
-  - enabled: 0
+  - enabled: 1
     path: Assets/FloorThree/Scene/Mitchells/Mitchells_V_ThirdFloor.unity
     guid: fb9b1fbf8f3019c429b485ec029d3a19
   - enabled: 1
@@ -38,16 +44,64 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/FloorThree/Scene/Levy/Levy_P_ThirdFloor.unity
     guid: f3bcd14770b777a4e9b295e4aa3a4ecf
-  - enabled: 0
+  - enabled: 1
     path: Assets/FloorThree/Scene/George Saunders/George Saunders_V_ThirdFloor.unity
     guid: 8742851702b84e849b401bb4e4aacb17
-  - enabled: 0
+  - enabled: 1
     path: Assets/FloorThree/Scene/George Saunders/George Saunders_P_ThirdFloor.unity
     guid: fadf12ebb6ee8e649a6caa170a8ce0bb
+  - enabled: 1
+    path: Assets/FloorOne/Scenes/George Saunders/George Saunders_V_FirstFloor.unity
+    guid: 1f2fef19b067e45448f7d39fded6b155
+  - enabled: 1
+    path: Assets/FloorOne/Scenes/George Saunders/George Saunders_P_FirstFloor.unity
+    guid: dbb06be681b36fc4cba14081148ebad0
+  - enabled: 1
+    path: Assets/FloorTwo/Scenes/George Saunders/George Saunders_V_SecondFloor.unity
+    guid: baa83fd677f9cc44fb025467040622e1
+  - enabled: 1
+    path: Assets/FloorTwo/Scenes/George Saunders/George Saunders_P_SecondFloor.unity
+    guid: 2616a568e0b1ed2438e12cf0fa06ccd6
   - enabled: 1
     path: Assets/FloorTwo/Scenes/Levys/Levys_V_SecondFloor.unity
     guid: 91582665dc4bce54bbe9f8c98460349c
   - enabled: 1
     path: Assets/FloorTwo/Scenes/Levys/Levys_P_Secondfloor.unity
     guid: 5ae7acfe45fd8e64ab82fe9721d0473a
+  - enabled: 1
+    path: Assets/FloorThree/Scene/Levy/Levy_V_TimeCapsule.unity
+    guid: 0f9a500f4a4db434eb782cf2de2528cf
+  - enabled: 1
+    path: Assets/FloorTwo/Scenes/Mitchells/MItchells_V_SecondFloor.unity
+    guid: f6791abc1e10d224c929efb12831e5ca
+  - enabled: 1
+    path: Assets/FloorTwo/Scenes/Mitchells/Mitchells_P_SecondFloor.unity
+    guid: b0543512629fd4948bec8af360ae8446
+  - enabled: 1
+    path: Assets/FloorOne/Scenes/Mitchells/Mitchells_V_FirstFloor.unity
+    guid: 26506c349809b3f4e8424f3b47429666
+  - enabled: 1
+    path: Assets/FloorOne/Scenes/Mitchells/Mitchells_P_FirstFloor.unity
+    guid: 2cb9210214d7c844ab6224369149b731
+  - enabled: 1
+    path: Assets/FloorTwo/Scenes/Oldfields/Oldfields_V_SecondFloor.unity
+    guid: c184c574cbe050040bb14a046711bae3
+  - enabled: 1
+    path: Assets/FloorTwo/Scenes/Oldfields/Oldfields_P_SecondFloor.unity
+    guid: a31221f04f9e3344082523e6198a5a7c
+  - enabled: 1
+    path: Assets/FloorOne/Scenes/Oldfields/Oldfields_V_FirstFloor.unity
+    guid: 56ea4a8fb1dbb8d43ae38df66c96e8e7
+  - enabled: 1
+    path: Assets/FloorOne/Scenes/Oldfields/Oldfields_P_FirstFloor.unity
+    guid: ef7408ede851b274faf67e4837869630
+  - enabled: 1
+    path: Assets/Privy/Privy_P.unity
+    guid: b22e6e9430bf30f489b39a1df391aaf3
+  - enabled: 1
+    path: Assets/Courtyard/Courtyard_V.unity
+    guid: d12b5b8dee46a2446afac529d6af6154
+  - enabled: 1
+    path: Assets/Courtyard/Courtyard_P.unity
+    guid: 95bcdb407045b5941bdef175df8db868
   m_configObjects: {}
