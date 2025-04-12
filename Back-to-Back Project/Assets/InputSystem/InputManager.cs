@@ -9,9 +9,11 @@ public class InputManager : MonoBehaviour
     private TouchControls touchControls;
     private GraphicRaycaster graphicRaycaster;
     private EventSystem eventSystem;
+    private ScrollRect activeScrollRect;
 
     private Vector2 startTouchPosition;
     private Vector2 endTouchPosition;
+    private bool isScrolling = false;
 
     private void Awake()
     {
@@ -29,16 +31,12 @@ public class InputManager : MonoBehaviour
         // Detect tap
         touchControls.Touch.TouchPress.started += StartTouch;
         touchControls.Touch.TouchPress.canceled += EndTouch;
-
-        // Detect hold
-        touchControls.Touch.TouchHold.performed += HoldTouch;
     }
 
     private void OnDisable()
     {
         touchControls.Touch.TouchPress.started -= StartTouch;
         touchControls.Touch.TouchPress.canceled -= EndTouch;
-        touchControls.Touch.TouchHold.performed -= HoldTouch;
         touchControls.Disable();
     }
 
@@ -46,24 +44,29 @@ public class InputManager : MonoBehaviour
     {
         // Touching the screen and finding the position
         Vector2 touchPosition = touchControls.Touch.TouchPosition.ReadValue<Vector2>();
-        Debug.Log($"Touched the screen at (screen space): {touchPosition}");
 
         // Check if the touch is over a UI element
         GameObject hitObject = GetUIElementAtPosition(touchPosition);
         if (hitObject != null)
         {
-            Debug.Log($"Touched UI element: {hitObject.name}");
+
+            // Check if it's a ScrollRect
+            ScrollRect scrollRect = hitObject.GetComponentInParent<ScrollRect>();
+            if (scrollRect != null)
+            {
+                Debug.Log("Touch detected on a ScrollRect");
+                isScrolling = true;
+                return;
+            }
 
             // Check if the UI element has an InteractiveObjects component
-            InteractiveObjects interactive = hitObject.GetComponentInParent<InteractiveObjects>();
-            if (interactive != null)
+            if (!isScrolling)
             {
-                Debug.Log("Interactive object found!");
-                interactive.ShowInfo();
-            }
-            else
-            {
-                Debug.Log($"No InteractiveObjects script found on {hitObject.name} or its parents.");
+                InteractiveObjects interactive = hitObject.GetComponentInParent<InteractiveObjects>();
+                if (interactive != null)
+                {
+                    interactive.ShowInfo();
+                }
             }
         }
 
@@ -78,17 +81,7 @@ public class InputManager : MonoBehaviour
         endTouchPosition = touchControls.Touch.TouchPosition.ReadValue<Vector2>();
         Vector2 swipeDelta = endTouchPosition - startTouchPosition;
 
-        if (swipeDelta.magnitude > 50f) // Adjust sensitivity
-        {
-            //Debug.Log("Swiped: " + swipeDelta);
-            // Trigger room transition or other event
-        }
-    }
-
-    private void HoldTouch(InputAction.CallbackContext context)
-    {
-        // Uncomment for holding functionality (if needed)
-        // Debug.Log("Holding touch on object...");
+        isScrolling = false;
     }
 
     // Function to detect UI elements at touch position
