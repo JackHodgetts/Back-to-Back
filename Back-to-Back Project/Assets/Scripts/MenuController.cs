@@ -110,7 +110,7 @@ public class MenuController : MonoBehaviour
     }
     public void LoadPrivy()
     {
-        SceneManager.LoadScene("Privy_P");
+        SceneManager.LoadScene("Privy_V");
     }
 
     //Back buttons that go to house main menu

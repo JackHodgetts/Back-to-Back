@@ -96,7 +96,7 @@ EditorBuildSettings:
     path: Assets/FloorOne/Scenes/Oldfields/Oldfields_P_FirstFloor.unity
     guid: ef7408ede851b274faf67e4837869630
   - enabled: 1
-    path: Assets/Privy/Privy_P.unity
+    path: Assets/Privy/Privy_V.unity
     guid: b22e6e9430bf30f489b39a1df391aaf3
   - enabled: 1
     path: Assets/Courtyard/Courtyard_V.unity

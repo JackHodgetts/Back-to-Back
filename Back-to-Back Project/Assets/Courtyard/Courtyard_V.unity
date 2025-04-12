@@ -442,6 +442,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 214898269833073484, guid: 1d65114810bcc8a4ab24566ed1138341, type: 3}
+      propertyPath: m_TargetCamera
+      value: 
+      objectReference: {fileID: 2067504755}
     - target: {fileID: 2540040776615883028, guid: 1d65114810bcc8a4ab24566ed1138341, type: 3}
       propertyPath: m_Name
       value: VideoPlayer
