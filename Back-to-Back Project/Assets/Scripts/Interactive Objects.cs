@@ -11,12 +11,12 @@ public class InteractiveObjects : MonoBehaviour
     public string titleName;
 
     public string newBackgroundName;
+    public string associatedBackground;
 
     public bool shouldswitchscene = false;
 
     public void ShowInfo()
     {
-        Debug.Log($"ShowInfo called on: {gameObject.name}");
 
         TextBoxController.instance.ResetScrollPosition();
         TextBoxController.instance.LoadTextFromFile(fileName);
@@ -27,16 +27,10 @@ public class InteractiveObjects : MonoBehaviour
 
     public void Activate()
     {
-        Debug.Log($"Activate called on: {gameObject.name}");
 
         if (shouldswitchscene && !string.IsNullOrEmpty(newBackgroundName))
         {
-            Debug.Log($"Attempting to transition scene to background: {newBackgroundName}");
             TextBoxController.instance.TransitionScene(newBackgroundName);
-        }
-        else
-        {
-            Debug.LogWarning("Activate called but newBackgroundName is empty or shouldswitchscene is false.");
         }
 
         gameObject.SetActive(false); // Hide this specific object after use
