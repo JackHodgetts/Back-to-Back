@@ -44,11 +44,15 @@ public class InputManager : MonoBehaviour
     {
         // Touching the screen and finding the position
         Vector2 touchPosition = touchControls.Touch.TouchPosition.ReadValue<Vector2>();
+        Debug.Log($"Touch started at: {touchPosition}");
+
 
         // Check if the touch is over a UI element
         GameObject hitObject = GetUIElementAtPosition(touchPosition);
         if (hitObject != null)
         {
+
+            Debug.Log($"Hit UI element: {hitObject.name}");
 
             // Check if it's a ScrollRect
             ScrollRect scrollRect = hitObject.GetComponentInParent<ScrollRect>();
@@ -65,7 +69,18 @@ public class InputManager : MonoBehaviour
                 InteractiveObjects interactive = hitObject.GetComponentInParent<InteractiveObjects>();
                 if (interactive != null)
                 {
-                    interactive.ShowInfo();
+                    Debug.Log($"Interactive object found: {interactive.name}");
+                    Debug.Log($"shouldswitchscene: {interactive.shouldswitchscene}, fileName: {interactive.fileName}");
+                    if (interactive.shouldswitchscene && string.IsNullOrEmpty(interactive.fileName))
+                    {
+                        Debug.Log("Calling Activate() for background-only interaction.");
+                        interactive.Activate(); // Only swap background
+                    }
+                    else
+                    {
+                        Debug.Log("Calling ShowInfo() for regular interactive.");
+                        interactive.ShowInfo(); // Show text and maybe switch background
+                    }
                 }
             }
         }
