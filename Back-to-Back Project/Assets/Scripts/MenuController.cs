@@ -114,5 +114,10 @@ public class MenuController : MonoBehaviour
     }
 
     //Back buttons that go to house main menu
+
+    public void LoadGerogeMiddleFloor2()
+    {
+        SceneManager.LoadScene("George Saunders MiddleFloor2");
+    }
     
 }
