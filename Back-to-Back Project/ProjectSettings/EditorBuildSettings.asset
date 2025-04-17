@@ -51,9 +51,6 @@ EditorBuildSettings:
     path: Assets/FloorOne/Scenes/George Saunders/George Saunders_V_FirstFloor.unity
     guid: 1f2fef19b067e45448f7d39fded6b155
   - enabled: 1
-    path: Assets/FloorOne/Scenes/George Saunders/George Saunders_P_FirstFloor.unity
-    guid: dbb06be681b36fc4cba14081148ebad0
-  - enabled: 1
     path: Assets/FloorTwo/Scenes/George Saunders/George Saunders_V_SecondFloor.unity
     guid: baa83fd677f9cc44fb025467040622e1
   - enabled: 1
