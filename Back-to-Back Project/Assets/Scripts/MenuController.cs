@@ -7,6 +7,11 @@ using UnityEngine.SceneManagement;
 public class MenuController : MonoBehaviour
 {
     //Loads the menu for each house
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
     public void LoadLevyMenu()
     {
         SceneManager.LoadScene("Levy_MainMenu");
