@@ -21,30 +21,6 @@ EditorBuildSettings:
     path: Assets/Scenes/GeorgeSaunders_MainMenu.unity
     guid: 26ce68d141d2d7a4385c26d41be25f06
   - enabled: 1
-    path: Assets/FloorThree/Scene/Oldfields/Oldfields_P_ThirdFloor.unity
-    guid: 9e76443f82227d7478778da8862b3d4a
-  - enabled: 1
-    path: Assets/FloorThree/Scene/Oldfields/Oldfields_V_ThirdFloor.unity
-    guid: 4f8ba95758f5aed40b72d64774921a62
-  - enabled: 1
-    path: Assets/FloorThree/Scene/Mitchells/Mitchels_P_ThirdFloor.unity
-    guid: 373a22578587d2e4fbb91ed167c7d528
-  - enabled: 1
-    path: Assets/FloorOne/Scenes/Levys/Levys_V_FirstFloor.unity
-    guid: bdc045f29ff7f0840bc2ef6865434d61
-  - enabled: 1
-    path: Assets/FloorTwo/Scenes/Levys/Levys_V_SecondFloor.unity
-    guid: 91582665dc4bce54bbe9f8c98460349c
-  - enabled: 1
-    path: Assets/FloorThree/Scene/Levy/Levy_V_ThirdFloor.unity
-    guid: 8561c2ee5f3d92e429391acb7494f09b
-  - enabled: 1
-    path: Assets/FloorThree/Scene/Levy/Levy_P_ThirdFloor.unity
-    guid: f3bcd14770b777a4e9b295e4aa3a4ecf
-  - enabled: 1
-    path: Assets/FloorThree/Scene/Levy/Levy_V_TimeCapsule.unity
-    guid: 0f9a500f4a4db434eb782cf2de2528cf
-  - enabled: 1
     path: Assets/FloorOne/Scenes/George Saunders/George Saunders_V_FirstFloor.unity
     guid: 1f2fef19b067e45448f7d39fded6b155
   - enabled: 1
@@ -63,6 +39,21 @@ EditorBuildSettings:
     path: Assets/FloorThree/Scene/George Saunders/George Saunders_P_ThirdFloor.unity
     guid: fadf12ebb6ee8e649a6caa170a8ce0bb
   - enabled: 1
+    path: Assets/FloorOne/Scenes/Levys/Levys_V_FirstFloor.unity
+    guid: bdc045f29ff7f0840bc2ef6865434d61
+  - enabled: 1
+    path: Assets/FloorTwo/Scenes/Levys/Levys_V_SecondFloor.unity
+    guid: 91582665dc4bce54bbe9f8c98460349c
+  - enabled: 1
+    path: Assets/FloorThree/Scene/Levy/Levy_V_ThirdFloor.unity
+    guid: 8561c2ee5f3d92e429391acb7494f09b
+  - enabled: 1
+    path: Assets/FloorThree/Scene/Levy/Levy_P_ThirdFloor.unity
+    guid: f3bcd14770b777a4e9b295e4aa3a4ecf
+  - enabled: 1
+    path: Assets/FloorThree/Scene/Levy/Levy_V_TimeCapsule.unity
+    guid: 0f9a500f4a4db434eb782cf2de2528cf
+  - enabled: 1
     path: Assets/FloorOne/Scenes/Mitchells/Mitchells_V_FirstFloor.unity
     guid: 26506c349809b3f4e8424f3b47429666
   - enabled: 1
@@ -71,6 +62,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/FloorTwo/Scenes/Mitchells/Mitchells_P_SecondFloor.unity
     guid: b0543512629fd4948bec8af360ae8446
+  - enabled: 1
+    path: Assets/FloorThree/Scene/Mitchells/Mitchels_P_ThirdFloor.unity
+    guid: 373a22578587d2e4fbb91ed167c7d528
   - enabled: 1
     path: Assets/FloorOne/Scenes/Oldfields/Oldfields_V_FirstFloor.unity
     guid: 56ea4a8fb1dbb8d43ae38df66c96e8e7
@@ -83,6 +77,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/FloorTwo/Scenes/Oldfields/Oldfields_P_SecondFloor.unity
     guid: a31221f04f9e3344082523e6198a5a7c
+  - enabled: 1
+    path: Assets/FloorThree/Scene/Oldfields/Oldfields_V_ThirdFloor.unity
+    guid: 4f8ba95758f5aed40b72d64774921a62
+  - enabled: 1
+    path: Assets/FloorThree/Scene/Oldfields/Oldfields_P_ThirdFloor.unity
+    guid: 9e76443f82227d7478778da8862b3d4a
   - enabled: 1
     path: Assets/Privy/Privy_V.unity
     guid: b22e6e9430bf30f489b39a1df391aaf3

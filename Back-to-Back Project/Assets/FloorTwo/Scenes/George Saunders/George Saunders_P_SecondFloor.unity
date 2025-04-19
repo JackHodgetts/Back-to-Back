@@ -1756,9 +1756,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'George Sauanders Second Floor
-
-'
+  m_text: George Sauanders Middle Floor
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0a7a106f627d63a41b54764e09102b4c, type: 2}
   m_sharedMaterial: {fileID: 8432538455107168431, guid: 0a7a106f627d63a41b54764e09102b4c, type: 2}
