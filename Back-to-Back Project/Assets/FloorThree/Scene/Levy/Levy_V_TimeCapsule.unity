@@ -282,7 +282,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Next
+  m_text: Return
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0a7a106f627d63a41b54764e09102b4c, type: 2}
   m_sharedMaterial: {fileID: 8432538455107168431, guid: 0a7a106f627d63a41b54764e09102b4c, type: 2}
@@ -749,8 +749,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 27.23, y: -262.62}
-  m_SizeDelta: {x: 611.53, y: 74.745}
+  m_AnchoredPosition: {x: 18.203007, y: -262.62}
+  m_SizeDelta: {x: 593.48, y: 74.745}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1193464153
 PrefabInstance:
@@ -1700,8 +1700,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 366.5, y: -263.75}
-  m_SizeDelta: {x: 67, y: 77}
+  m_AnchoredPosition: {x: 357.471, y: -263.75}
+  m_SizeDelta: {x: 85.06, y: 77}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2040398893
 MonoBehaviour:
@@ -1761,7 +1761,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2040398893}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-        m_MethodName: Next
+        m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
