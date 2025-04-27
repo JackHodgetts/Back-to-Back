@@ -63,14 +63,8 @@ EditorBuildSettings:
     path: Assets/FloorTwo/Scenes/Mitchells/Mitchells_P_SecondFloor.unity
     guid: b0543512629fd4948bec8af360ae8446
   - enabled: 1
-    path: Assets/FloorThree/Scene/Mitchells/Mitchels_P_ThirdFloor.unity
-    guid: 373a22578587d2e4fbb91ed167c7d528
-  - enabled: 1
     path: Assets/FloorOne/Scenes/Oldfields/Oldfields_V_FirstFloor.unity
     guid: 56ea4a8fb1dbb8d43ae38df66c96e8e7
-  - enabled: 1
-    path: Assets/FloorOne/Scenes/Oldfields/Oldfields_P_FirstFloor.unity
-    guid: ef7408ede851b274faf67e4837869630
   - enabled: 1
     path: Assets/FloorTwo/Scenes/Oldfields/Oldfields_V_SecondFloor.unity
     guid: c184c574cbe050040bb14a046711bae3
@@ -89,7 +83,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Courtyard/Courtyard_V.unity
     guid: d12b5b8dee46a2446afac529d6af6154
-  - enabled: 1
-    path: Assets/Courtyard/Courtyard_P.unity
-    guid: 95bcdb407045b5941bdef175df8db868
   m_configObjects: {}
